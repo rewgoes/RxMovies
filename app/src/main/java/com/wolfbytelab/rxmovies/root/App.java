@@ -4,6 +4,7 @@ import android.app.Application;
 
 import com.wolfbytelab.rxmovies.http.ApiModuleForInfo;
 import com.wolfbytelab.rxmovies.http.ApiModuleForName;
+import com.wolfbytelab.rxmovies.topmovies.TopMoviesModule;
 
 public class App extends Application {
 
@@ -17,6 +18,7 @@ public class App extends Application {
                 .applicationModule(new ApplicationModule(this))
                 .apiModuleForName(new ApiModuleForName())
                 .apiModuleForInfo(new ApiModuleForInfo())
+                .topMoviesModule(new TopMoviesModule())
                 .build();
     }
 
