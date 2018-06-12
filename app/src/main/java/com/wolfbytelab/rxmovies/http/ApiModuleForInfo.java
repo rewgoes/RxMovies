@@ -1,5 +1,7 @@
 package com.wolfbytelab.rxmovies.http;
 
+import com.wolfbytelab.rxmovies.BuildConfig;
+
 import java.io.IOException;
 
 import dagger.Module;
@@ -18,7 +20,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ApiModuleForInfo {
 
     public final String BASE_URL = "http://www.omdbapi.com";
-    public final String API_KEY = "4f1016c2";
+    public final String API_KEY = BuildConfig.omdbApiKey;
 
 
     @Provides
