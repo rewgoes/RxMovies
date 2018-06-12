@@ -85,7 +85,7 @@ public class TopMoviesRepository implements Repository {
         }).concatMap(new Function<OmdbApi, Observable<String>>() {
             @Override
             public Observable<String> apply(OmdbApi omdbApi) {
-                return Observable.just(omdbApi.getCountry());
+                return Observable.just(omdbApi.getCountry() != null ? omdbApi.getCountry() : "");
             }
         }).doOnNext(new Consumer<String>() {
             @Override
